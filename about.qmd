@@ -1,6 +1,6 @@
 ---
-title: About Me
-image: IMG_1986.JPG
+title: About Me!
+image: IMG_1986
 about:
   template: jolla
 ---
