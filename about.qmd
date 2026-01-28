@@ -26,6 +26,7 @@ My cats!
 
 ![This is just one of them, but I promise I like the other one too](img/IMG_4010.jpeg){width=200}
 This is just one of them, but I promise I like the other one too
+
 My Big 5 Personality Test
 
 ![](img/BIGFIVE.png){width=1000}
