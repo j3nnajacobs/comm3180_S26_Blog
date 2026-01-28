@@ -3,7 +3,8 @@
     "listing": "/index.html",
     "items": [
       "/posts/002_post_title/Blog.post.01.23.html",
-      "/posts/000_test_post/index.html"
+      "/posts/000_test_post/index.html",
+      "/posts/001_DOW1_Weather/DOW1.html"
     ]
   }
 ]

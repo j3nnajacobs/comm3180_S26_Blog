@@ -7,6 +7,20 @@
     "text": "About this blog"
   },
   {
+    "objectID": "posts/002_post_title/Blog.post.01.23.html",
+    "href": "posts/002_post_title/Blog.post.01.23.html",
+    "title": "Jenna’s Test",
+    "section": "",
+    "text": "This is my first blog post that I am trying out!\n\nI am hoping that there are no issues and it shows up correctly."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "My Data Stories",
+    "section": "",
+    "text": "Jenna’s Test\n\n\n\nLLMs\n\nLearning\n\n\n\nTesting Blogging\n\n\n\n\n\nJan 23, 2026\n\n\nJenna\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nvisualization\n\ndata stories\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nJan 12, 2026\n\n\nAn LLM User\n\n\n\n\n\n\n\n\n\n\n\n\nData set of the Week #1: The Weather in Philadelphia\n\n\n\nDOW\n\nWeather\n\n\n\n\n\n\n\n\n\nJan 12, 2026\n\n\nJenna\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/000_test_post/index.html",
     "href": "posts/000_test_post/index.html",
     "title": "A test post",
@@ -21,17 +35,10 @@
     "text": "Stories from data\n\nLet’s set up some data\n\n\nx = ['A', 'B', 'C']\ny = [1, 5, 3]\n\n\nNow let’s visualize it\n\nplt.bar(x, y)\nplt.show()"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "My Data Stories",
+    "objectID": "posts/001_DOW1_Weather/DOW1.html",
+    "href": "posts/001_DOW1_Weather/DOW1.html",
+    "title": "Data set of the Week #1: The Weather in Philadelphia",
     "section": "",
-    "text": "Jenna’s Test\n\n\n\nLLMs\n\nLearning\n\n\n\nTesting Blogging\n\n\n\n\n\nJan 23, 2026\n\n\nJenna\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nvisualization\n\ndata stories\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nJan 12, 2026\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/002_post_title/Blog.post.01.23.html",
-    "href": "posts/002_post_title/Blog.post.01.23.html",
-    "title": "Jenna’s Test",
-    "section": "",
-    "text": "This is my first blog post that I am trying out!\n\nI am hoping that there are no issues and it shows up correctly."
+    "text": "My post\n\nprint('This is some code.')\n\nThis is some code."
   }
 ]
