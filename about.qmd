@@ -5,4 +5,27 @@ about:
   template: jolla
 ---
 
-About this blog
+About me!
+
+Hi! My name is Jenna Jacobs, i’m a Junior in the college.
+
+Some of my favorite things…
+
+![Me and my mom at a Canes Game](img/IMG_3962.jpg){width=200}
+I love Hockey! The Hurricanes are my favorite team!
+
+I’m on the Penn varsity swim team and I love to swim!
+
+![My first year of swimming with my twin brother](img/IMG_7893.jpeg){width=200}
+My first year of swimming with my twin brother
+
+PWSD Latest Hype Swim Video: 
+[PWSD Latest Hype Swim Video](https://www.instagram.com/pennswimdive/reel/DTdeSIvgEZt/)
+
+My cats!
+
+![This is just one of them, but I promise I like the other one too](img/IMG_4010.jpeg){width=200}
+This is just one of them, but I promise I like the other one too
+My Big 5 Personality Test
+
+![](img/BIGFIVE.png){width=1000}
