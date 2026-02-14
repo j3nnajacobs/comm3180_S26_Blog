@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Jenna Jacobs">
-<meta name="dcterms.date" content="2026-02-06">
 
-<title>Planning the Perfect Outdoor Event in Philadelphia: What 20 Years of Weather Data Reveals – Jenna Jacobs: My Data Stories</title>
+<title>mbti.wb – Jenna Jacobs: My Data Stories</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,39 +142,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Planning the Perfect Outdoor Event in Philadelphia: What 20 Years of Weather Data Reveals</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">DOW</div>
-                <div class="quarto-category">Weather</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Jenna Jacobs </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">February 6, 2026</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -186,120 +152,146 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<div id="df8e18a1-fd13-46b2-9461-a5718621cb02" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title: <span class="st">"Planning the Perfect Outdoor Event in Philadelphia: What 20 Years of Weather Data Reveals"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>author: <span class="st">"Jenna Jacobs"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>date: <span class="st">"02/06/2026"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>categories:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> DOW</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> Weather</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="c74f32d9-8326-49d1-9e5c-e5ee0d7bfd34" class="cell" data-execution_count="21">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> nltk</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.sentiment <span class="im">import</span> SentimentIntensityAnalyzer</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>mbti_df <span class="op">=</span> pd.read_csv(<span class="st">'mbti.csv'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="67454c62-35ae-46c5-8770-2f59e59093ad" class="cell" data-execution_count="22">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>nltk.download(<span class="st">'vader_lexicon'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>[nltk_data] Downloading package vader_lexicon to
+[nltk_data]     /Commjhub/jupyterhub/home/j3nnajacobs/nltk_data...
+[nltk_data]   Package vader_lexicon is already up-to-date!</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+<pre><code>True</code></pre>
+</div>
+</div>
+<div id="115cf77b-c562-44c2-8aeb-1d1f19b9963b" class="cell" data-execution_count="28">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>extrovert <span class="op">=</span> mbti_df[mbti_df[<span class="st">"type"</span>].<span class="bu">str</span>.startswith(<span class="st">"E"</span>)]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(extroverts)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      filename  type                                              posts
+1            1  ENTP  'I'm finding the lack of me in these posts ver...
+4            4  ENTJ  'You're fired.|||That's another silly misconce...
+11          11  ENFJ  'https://www.youtube.com/watch?v=PLAaiKvHvZs||...
+22          22  ENTJ  'Now I'm interested. But too lazy to go resear...
+24          24  ENTJ  'Still going strong at just over the two year ...
+...        ...   ...                                                ...
+8659      8659  ENFP  'leoni I had really bad social anxiety until I...
+8661      8661  ENTP  '**haven't logged in and read posts for over 6...
+8665      8665  ENTP  'This test wasn't even close on my gender, age...
+8667      8667  ENTP  'I think generally people experience post trau...
+8671      8671  ENFP  'So...if this thread already exists someplace ...
 
-<div id="7b17aba9-6a59-48aa-804c-5f325f94422e" class="cell" data-execution_count="16">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>sample_df <span class="op">=</span> pd.read_csv(<span class="st">'philadelphia_weather_2005_to_2025.csv'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+[1999 rows x 3 columns]</code></pre>
 </div>
-<section id="introduction" class="level1 alert alert-info">
-<h1><strong>Introduction</strong></h1>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="data/outdoorbirthday.png" class="img-fluid figure-img" width="200"></p>
-<figcaption>Birthday Party</figcaption>
-</figure>
 </div>
-<section id="whether-youre-planning-your-wedding-birthday-party-baby-shower-or-any-other-outdoor-event-you-want-it-to-be-perfect.-you-spend-so-much-time-planning-what-you-can-control-its-always-a-bummer-when-what-you-cant-control-ruins-it-bad-weather" class="level2">
-<h2 class="anchored" data-anchor-id="whether-youre-planning-your-wedding-birthday-party-baby-shower-or-any-other-outdoor-event-you-want-it-to-be-perfect.-you-spend-so-much-time-planning-what-you-can-control-its-always-a-bummer-when-what-you-cant-control-ruins-it-bad-weather">Whether you’re planning your wedding, birthday party, baby shower, or any other outdoor event, you want it to be <strong>perfect</strong>. You spend so much time planning what you can control, its always a bummer when what you can’t control ruins it: <strong>Bad weather</strong></h2>
-</section>
-<section id="but-never-fear-after-analyzing-20-years-of-weather-data-in-philadelphia-i-set-out-to-find-when-mother-nature-is-most-likely-to-cooperaterevealing-the-best-saturdays-and-the-best-months-to-plan-an-outdoor-event-with-confidence." class="level2">
-<h2 class="anchored" data-anchor-id="but-never-fear-after-analyzing-20-years-of-weather-data-in-philadelphia-i-set-out-to-find-when-mother-nature-is-most-likely-to-cooperaterevealing-the-best-saturdays-and-the-best-months-to-plan-an-outdoor-event-with-confidence.">But never fear! After analyzing 20 years of weather data in Philadelphia, I set out to find when Mother Nature is most likely to cooperate—revealing the best Saturdays and the best months to plan an outdoor event with confidence.</h2>
-</section>
-</section>
-<div class="alert alert-danger">
-<section id="so-what-is-a-perfect-saturday" class="level1">
-<h1><strong>So what is a Perfect Saturday?</strong></h1>
-<section id="based-on-a-survey-from-yougov-60-of-americans-reported-they-beleive-the-perfect-temperature-is-in-the-mid-70s.-so-for-this-analysis-perfect-temperature-is-defined-as-anywhere-from-70-79-f." class="level2">
-<h2 class="anchored" data-anchor-id="based-on-a-survey-from-yougov-60-of-americans-reported-they-beleive-the-perfect-temperature-is-in-the-mid-70s.-so-for-this-analysis-perfect-temperature-is-defined-as-anywhere-from-70-79-f.">Based on a survey from <em><a href="https://today.yougov.com/society/articles/9849-americans-agree-the-ideal-temperature">YouGov</a></em>, 60% of Americans reported they beleive the perfect temperature is in the mid 70’s. So for this analysis, “perfect” temperature is defined as anywhere from 70-79 ∘F.</h2>
-</section>
-</section>
-<div class="alert alert-warning">
-<section id="how-many-saturdays-have-their-been-in-the-past-20-years" class="level1">
-<h1><strong>How many Saturdays have their been in the past 20 years?</strong></h1>
-<section id="on-my-mission-to-finding-perfect-saturdays-i-first-had-to-find-how-many-saturdays-there-have-been-in-the-past-20-years.-after-some-evaluations-i-found-that-there-were-a-total-of-1096-saturdays-in-the-past-20-years." class="level2">
-<h2 class="anchored" data-anchor-id="on-my-mission-to-finding-perfect-saturdays-i-first-had-to-find-how-many-saturdays-there-have-been-in-the-past-20-years.-after-some-evaluations-i-found-that-there-were-a-total-of-1096-saturdays-in-the-past-20-years.">On my mission to finding Perfect Saturdays, I first had to find how many Saturdays there have been in the past 20 years. After some evaluations, I found that there were a total of <strong>1,096 Saturdays</strong> in the past 20 years.</h2>
-<div id="c3e820f0-b20a-4934-9b7f-503208c66f11" class="cell" data-execution_count="17">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>amt_of_saturdays <span class="op">=</span> sample_df[<span class="st">'dow_name'</span>] <span class="op">==</span> <span class="st">'Saturday'</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(amt_of_saturdays.<span class="bu">sum</span>())</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"There are </span><span class="sc">{</span>amt_of_saturdays<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss"> Saturdays in the data set."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="00599b8b-27a0-4fd7-96d3-97d06c0fd2c3" class="cell" data-execution_count="29">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>sid <span class="op">=</span> SentimentIntensityAnalyzer()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="5e8031e7-83c3-4015-809b-c6f2f6c55495" class="cell" data-execution_count="31">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>extrovert_compound_mean <span class="op">=</span> extrovert[<span class="st">"posts"</span>].astype(<span class="bu">str</span>).<span class="bu">apply</span>(<span class="kw">lambda</span> x: sid.polarity_scores(x)[<span class="st">"compound"</span>]).mean()</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(extrovert_compound_mean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>1096
-There are 1096 Saturdays in the data set.</code></pre>
+<pre><code>0.8988430715357678</code></pre>
 </div>
 </div>
-</section>
-</section>
-<div class="alert alert-danger">
-<section id="perfect-weather-isnt-just-temperature-its-precipitation-too." class="level1">
-<h1><strong>Perfect weather isn’t just temperature, it’s precipitation too.</strong></h1>
-<section id="continuing-my-mission-to-finding-the-perfect-saturday-i-realized-that-no-one-wants-their-outdoor-events-to-get-rained-or-snowed-on.-so-i-filtered-through-the-last-20-years-to-find-only-saturdays-with-no-precipitation.-i-found-that-there-were-a-total-of-735-saturdays-in-the-past-20-years-that-had-no-precipitation." class="level2">
-<h2 class="anchored" data-anchor-id="continuing-my-mission-to-finding-the-perfect-saturday-i-realized-that-no-one-wants-their-outdoor-events-to-get-rained-or-snowed-on.-so-i-filtered-through-the-last-20-years-to-find-only-saturdays-with-no-precipitation.-i-found-that-there-were-a-total-of-735-saturdays-in-the-past-20-years-that-had-no-precipitation.">Continuing my mission to finding the Perfect Saturday, I realized that no one wants their outdoor events to get rained or snowed on. So I filtered through the last 20 years to find only Saturdays with no precipitation. I found that there were a total of <strong>735 Saturdays</strong> in the past 20 years that had no precipitation.</h2>
-<div id="bdb43e57-d02b-4eed-89e4-676e5d62ce14" class="cell" data-execution_count="18">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>no_snow_rain <span class="op">=</span> (sample_df[<span class="st">'snow'</span>]<span class="op">==</span><span class="dv">0</span>) <span class="op">&amp;</span> (sample_df[<span class="st">'rain'</span>]<span class="op">==</span><span class="dv">0</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>saturdays_no_rain_snow <span class="op">=</span> no_snow_rain <span class="op">&amp;</span> amt_of_saturdays</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(saturdays_no_rain_snow.<span class="bu">sum</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="53f48263-2b35-434d-86f2-10973f177cb7" class="cell" data-execution_count="39">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>extrovert_compound_min <span class="op">=</span> extrovert[<span class="st">"posts"</span>].astype(<span class="bu">str</span>).<span class="bu">apply</span>(<span class="kw">lambda</span> x: sid.polarity_scores(x)[<span class="st">"compound"</span>]).<span class="bu">min</span>()</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(extrovert_compound_min)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>735</code></pre>
+<pre><code>-0.9988</code></pre>
 </div>
 </div>
-</section>
-</section>
-<div class="alert alert-warning">
-<section id="temperatures-between-70-79-f" class="level1">
-<h1><strong>Temperatures between 70-79 ∘F!</strong></h1>
-<section id="as-discussed-above-a-perfect-saturday-is-defined-as-having-an-average-temperature-between-7079f.-using-this-criterion-i-created-a-filter-to-pull-saturdays-that-fall-within-this-ideal-temperature-range-while-also-having-no-precipitation.-the-graph-below-visualizes-how-often-these-ideal-saturdays-occur." class="level2">
-<h2 class="anchored" data-anchor-id="as-discussed-above-a-perfect-saturday-is-defined-as-having-an-average-temperature-between-7079f.-using-this-criterion-i-created-a-filter-to-pull-saturdays-that-fall-within-this-ideal-temperature-range-while-also-having-no-precipitation.-the-graph-below-visualizes-how-often-these-ideal-saturdays-occur.">As discussed above, a Perfect Saturday is defined as having an average temperature between 70–79°F. Using this criterion, I created a filter to pull Saturdays that fall within this ideal temperature range while also having no precipitation. The graph below visualizes how often these ideal Saturdays occur.</h2>
-<div id="4e245f0a-60f7-4dd2-9aa0-437b6d3db58f" class="cell" data-execution_count="19">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>avg_temp_saturdays <span class="op">=</span> (((sample_df[<span class="st">'high'</span>] <span class="op">+</span> sample_df[<span class="st">'low'</span>]) <span class="op">/</span> <span class="dv">2</span> <span class="op">&gt;=</span> <span class="dv">70</span>) <span class="op">&amp;</span> ((sample_df[<span class="st">'high'</span>] <span class="op">+</span> sample_df[<span class="st">'low'</span>]) <span class="op">/</span> <span class="dv">2</span> <span class="op">&lt;=</span> <span class="dv">79</span>))</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>perf_saturdays <span class="op">=</span> saturdays_no_rain_snow <span class="op">&amp;</span> avg_temp_saturdays</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>months <span class="op">=</span> sample_df.loc[perf_saturdays, <span class="st">'date'</span>].<span class="bu">str</span>[<span class="dv">5</span>:<span class="dv">7</span>]</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>saturday_month_counts <span class="op">=</span> months.value_counts().sort_index()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="36ed708b-2769-4046-8fe3-5202d8c638ce" class="cell" data-execution_count="41">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>extrovert_compound_max <span class="op">=</span> extrovert[<span class="st">"posts"</span>].astype(<span class="bu">str</span>).<span class="bu">apply</span>(<span class="kw">lambda</span> x: sid.polarity_scores(x)[<span class="st">"compound"</span>]).<span class="bu">max</span>()</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(extrovert_compound_max)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.9999</code></pre>
 </div>
-<div id="03d4e0c8-b53b-4522-b55c-1433c1edea0e" class="cell" data-execution_count="20">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>saturday_month_counts.plot(kind<span class="op">=</span><span class="st">'bar'</span>, color<span class="op">=</span><span class="st">'pink'</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Total Perfect Saturdays Per Month (01 = Jan, 12 = Dec)'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of Perfect Saturdays'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Perfect Saturdays by Month (2005–2025)'</span>, fontsize<span class="op">=</span><span class="dv">20</span>)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="c545128c-85fd-49c1-bbf7-cd9eee4fd82f" class="cell" data-execution_count="32">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>introvert <span class="op">=</span> mbti_df[mbti_df[<span class="st">"type"</span>].<span class="bu">str</span>.startswith(<span class="st">"I"</span>)]</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(introvert)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      filename  type                                              posts
+0            0  INFJ  'http://www.youtube.com/watch?v=qsXHcwe3krw|||...
+2            2  INTP  'Good one  _____   https://www.youtube.com/wat...
+3            3  INTJ  'Dear INTP,   I enjoyed our conversation the o...
+5            5  INTJ  '18/37 @.@|||Science  is not perfect. No scien...
+6            6  INFJ  'No, I can't draw on my own nails (haha). Thos...
+...        ...   ...                                                ...
+8669      8669  INFJ  'I'm not sure about a method for picking out I...
+8670      8670  ISFP  'https://www.youtube.com/watch?v=t8edHB_h908||...
+8672      8672  INTP  'So many questions when i do these things.  I ...
+8673      8673  INFP  'I am very conflicted right now when it comes ...
+8674      8674  INFP  'It has been too long since I have been on per...
+
+[6676 rows x 3 columns]</code></pre>
+</div>
+</div>
+<div id="384cc791-65ab-463e-aa6d-273f47067675" class="cell" data-execution_count="44">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>introvert_compound_mean <span class="op">=</span> introvert[<span class="st">"posts"</span>].astype(<span class="bu">str</span>).<span class="bu">apply</span>(<span class="kw">lambda</span> x: sid.polarity_scores(x)[<span class="st">"compound"</span>]).mean()</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(introvert_compound_mean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.8630034901138406</code></pre>
+</div>
+</div>
+<div id="2fb25f28-f990-4b3a-87de-8a46f4181cf1" class="cell" data-execution_count="42">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>introvert_compound_min <span class="op">=</span> extrovert[<span class="st">"posts"</span>].astype(<span class="bu">str</span>).<span class="bu">apply</span>(<span class="kw">lambda</span> x: sid.polarity_scores(x)[<span class="st">"compound"</span>]).<span class="bu">min</span>()</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(introvert_compound_min)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>-0.9988</code></pre>
+</div>
+</div>
+<div id="a536fc51-68b9-4748-8ccc-75f25e1c47b0" class="cell" data-execution_count="43">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>introvert_compound_max <span class="op">=</span> extrovert[<span class="st">"posts"</span>].astype(<span class="bu">str</span>).<span class="bu">apply</span>(<span class="kw">lambda</span> x: sid.polarity_scores(x)[<span class="st">"compound"</span>]).<span class="bu">max</span>()</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(introvert_compound_max)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.9999</code></pre>
+</div>
+</div>
+<div id="c297592f-6a1b-4093-aa68-03bbff9664e3" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>intro_extro_means <span class="op">=</span> introvert_compound_mean</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="0acb7c81-b9ee-4a89-b6cb-ffff07cdd5ba" class="cell" data-execution_count="45">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>plt.bar([<span class="st">"Introverts"</span>, <span class="st">"Extroverts"</span>],[introvert_compound_mean, extrovert_compound_mean], color<span class="op">=</span>[<span class="st">"lightblue"</span>, <span class="st">"pink"</span>])</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Average Sentiment: Introverts vs Extroverts"</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Compound Sentiment"</span>)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="DOW1_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="MBTI.WB_files/figure-html/cell-15-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-</section>
-<div class="alert alert-warning">
-<section id="what-does-this-graph-show" class="level1">
-<h1><strong>What does this graph show?</strong></h1>
-<section id="looking-at-this-graph-there-are-many-observations-that-can-be-made.-first-months-january-march-and-november-december-are-not-acconuted-on-the-graph-because-they-have-0-perfect-saturdays.-this-makes-sense-as-those-months-fall-in-the-winter-season-and-would-improbably-have-any-perfect-saturday-conditions." class="level2">
-<h2 class="anchored" data-anchor-id="looking-at-this-graph-there-are-many-observations-that-can-be-made.-first-months-january-march-and-november-december-are-not-acconuted-on-the-graph-because-they-have-0-perfect-saturdays.-this-makes-sense-as-those-months-fall-in-the-winter-season-and-would-improbably-have-any-perfect-saturday-conditions.">Looking at this graph, there are many observations that can be made. First, months January-March and November-December are not acconuted on the graph because they have 0 Perfect Saturdays. This makes sense as those months fall in the winter season and would improbably have any Perfect Saturday conditions.</h2>
-</section>
-<section id="next-april-as-marked-04-on-the-x-axis-has-the-least-amount-of-perfect-saturdays-out-of-the-months-that-have-perfect-saturdays.-this-would-make-it-one-of-the-lowest-probabilty-months-to-have-a-successful-outdoor-event-although-there-is-still-some-probability." class="level2">
-<h2 class="anchored" data-anchor-id="next-april-as-marked-04-on-the-x-axis-has-the-least-amount-of-perfect-saturdays-out-of-the-months-that-have-perfect-saturdays.-this-would-make-it-one-of-the-lowest-probabilty-months-to-have-a-successful-outdoor-event-although-there-is-still-some-probability.">Next, April as marked “04” on the X-Axis has the least amount of Perfect Saturdays out of the months that have Perfect Saturdays. This would make it one of the lowest probabilty months to have a successful outdoor event, although there is still some probability.</h2>
-</section>
-<section id="last-june-06-and-august-08-display-the-highest-amount-of-perfect-saturdays." class="level2">
-<h2 class="anchored" data-anchor-id="last-june-06-and-august-08-display-the-highest-amount-of-perfect-saturdays.">Last, June (“06”) and August (“08”) display the highest amount of Perfect Saturdays.</h2>
-</section>
-</section>
-<section id="so-when-should-you-plan-your-outdoor-events" class="level1 alert alert-danger">
-<h1><strong>So when should you plan your outdoor events?</strong></h1>
-<section id="after-analyzing-the-data-it-is-clear-that-august-has-statistically-had-the-most-perfect-saturdays-in-the-past-20-years.-for-anyone-who-is-planning-an-outdoor-event-this-analysis-suggests-that-august-or-late-summer-has-the-greatest-probability-for-having-the-perfect-saturday.-weather-youre-planning-your-perfect-wedding-baby-shower-birthday-party-or-any-other-event-outside-you-can-have-confidence-that-the-weather-will-enhance-your-event-not-ruin-it." class="level2">
-<h2 class="anchored" data-anchor-id="after-analyzing-the-data-it-is-clear-that-august-has-statistically-had-the-most-perfect-saturdays-in-the-past-20-years.-for-anyone-who-is-planning-an-outdoor-event-this-analysis-suggests-that-august-or-late-summer-has-the-greatest-probability-for-having-the-perfect-saturday.-weather-youre-planning-your-perfect-wedding-baby-shower-birthday-party-or-any-other-event-outside-you-can-have-confidence-that-the-weather-will-enhance-your-event-not-ruin-it.">After analyzing the data, it is clear that August has statistically had the most Perfect Saturdays in the past 20 years. For anyone who is planning an outdoor event, this analysis suggests that August or late summer has the greatest probability for having the Perfect Saturday. “Weather” you’re planning your perfect wedding, baby shower, birthday party, or any other event outside you can have confidence that the weather will enhance your event, not ruin it.</h2>
 
 
-</section>
-</section>
-</div>
-</div>
-</div>
-</div>
-</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
